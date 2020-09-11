@@ -4,7 +4,7 @@ std::vector<unsigned char> bytes;
 
 int main()
 {
-	client* conn{ 0 };
+	client* conn = new client;
 
 	conn->initialize("<ip>",6940);
 	
