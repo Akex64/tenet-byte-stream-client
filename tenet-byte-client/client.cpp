@@ -12,8 +12,8 @@ void client::initialize(std::string ip, int port) {
 
 	SOCKADDR_IN addr;
 	int sizeofaddr = sizeof(addr);
-	addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-	addr.sin_port = htons(1111);
+	addr.sin_addr.s_addr = inet_addr(ip);
+	addr.sin_port = htons(port);
 	addr.sin_family = AF_INET;
 
 	connection = socket(AF_INET, SOCK_STREAM, NULL);
